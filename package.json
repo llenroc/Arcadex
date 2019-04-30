@@ -1,0 +1,26 @@
+{
+  "name": "Arcadex",
+  "version": "0.0.1",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0",
+    "shelljs": "^0.8.3",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.1"
+  },
+  "devDependencies": {
+    "@dexon-foundation/ganache-cli": "^6.2.5",
+    "@dexon-foundation/truffle": "^5.0.16",
+    "web3-utils": "^1.0.0-beta.52"
+  },
+  "scripts": {
+    "test": "dist=.build dexon-truffle test --network development",
+    "ganache": "dexon-ganache-cli -e 100000",
+    "dev": "dist=./build dexon-truffle migrate",
+    "prod": "dist=./dist dexon-truffle migrate"
+  },
+  "author": "DEXON Foundation",
+  "license": "AGPL"
+}
